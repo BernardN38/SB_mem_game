@@ -6,7 +6,7 @@
   display: inline-block;
 }
 body {
-  background-color: gray;
+  background-color: silver;
 }
 h1 {
 
@@ -27,4 +27,8 @@ h1 {
 }
 .tries  {
   display: inline;
+}
+#game > div {
+  background-color: black;
+  transition: all 0.5s;
 }
