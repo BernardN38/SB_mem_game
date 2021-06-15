@@ -87,11 +87,13 @@ let freeze = false;
 
 let changeColor = (event) => {
 	event.target.style.backgroundColor = event.target.classList[0];
+  freeze = false;
 };
 let flipCard = (event) => {
 	if (freeze === false) {
 		let card = [ event.target.classList[0], event.target.id ];
 		if (cardsFlipped != 2) {
+      freeze = true;
 			twoCards.push(card);
 			cardsFlipped++;
 			changeColor(event);
