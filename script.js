@@ -5,7 +5,7 @@ const highscore = document.querySelector('#highscore');
 
 let COLORS = [];
 const makeColors = () => {
-	let colorsList = [ 'red', 'blue', 'green', 'orange', 'purple' ];
+	let colorsList = [ 'red', 'blue', 'green', 'orange', 'purple', 'yellow', 'teal' ];
 	let x = 0;
 	while (x < 2) {
 		for (let i = 0; i < colorsList.length; i++) {
