@@ -9,7 +9,7 @@ const makeColors = () => {
 	let x = 0;
 	while (x < 2) {
 		for (let i = 0; i < colorsList.length; i++) {
-			if (Math.random() > 0.5) {
+			if (Math.random() > 0.65) {
 				COLORS.push(colorsList[i]);
 				COLORS.push(colorsList[i]);
 			}
@@ -20,7 +20,7 @@ const makeColors = () => {
 makeColors();
 // here is a helper function to shuffle an array
 // it returns the same array with values shuffled
-// it is based on an algorithm called Fisher Yates if you want ot research more
+// it is based on an algorithm called Fisher Yates if you want to research more
 function shuffle(array) {
 	let counter = array.length;
 
@@ -87,13 +87,14 @@ let freeze = false;
 
 let changeColor = (event) => {
 	event.target.style.backgroundColor = event.target.classList[0];
-  freeze = false;
+	freeze = false;
 };
+
 let flipCard = (event) => {
 	if (freeze === false) {
 		let card = [ event.target.classList[0], event.target.id ];
 		if (cardsFlipped != 2) {
-      freeze = true;
+			freeze = true;
 			twoCards.push(card);
 			cardsFlipped++;
 			changeColor(event);
@@ -101,7 +102,6 @@ let flipCard = (event) => {
 		if (cardsFlipped === 2) {
 			freeze = true;
 			if (twoCards[0][0] === twoCards[1][0] && twoCards[0][1] != twoCards[1][1]) {
-				console.log('match');
 				saveCards.push(twoCards[0][1], twoCards[1][1]);
 				cardsFlipped = 0;
 				twoCards = [];
