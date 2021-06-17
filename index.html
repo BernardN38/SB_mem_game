@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Meme Generator</title>
-</head>
-<body>
-    <h1>Create Your Own Meme!</h1>
-    <div class="container">
-    <div class="left-display" class='container'><h2>Your Great Memes!</h2></div>
-    <form action="">
-        <label for="image" >Submit a link to your image:</label>
-        <input type="text" id="image">
-        <label for="top-text">Top of meme text:</label>
-        <input type="text" name="" id="top-text">
-        <div class="img-container">
-            <div class="top"></div>
-        <img id="current-img" class="meme-img" src="https://images.theconversation.com/files/38926/original/5cwx89t4-1389586191.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" alt="" srcset="">  
-            <div class="bottom"></div> <button class="hidden">Delete</button>
-        </div>
-        <label for="bottom-text">Bottom Text:</label>
-        <input type="text" name="" id="bottom-text">
-        <button id="submit">Submit</button>
-    </form>
-    <div class="right-display"><h2>Also your Great Memes!</h2></div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memory Game!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Memory Game!</h1> 
+    <header>
+      <div class="tries">Tries:</div><div id="counter"></div><div class="tries">HighScore:</div><div id="highscore"></div><button id="restart" class="random">Reset & Randomize Game</button>
+    </header>
+  
+    <div id="game">
     </div>
-</body>
-<script src="app.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
