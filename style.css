@@ -1,39 +1,121 @@
-#game div {
-	border: 2px solid white;
-	height: 150px;
-	margin: 2px;
-	background-color: black;
-	transition: all 0.5s;
-	width: 28%;
-	flex-grow: 1;
-}
-body {
-	background-color: silver;
-}
 h1 {
+	font-size: 3rem;
+	text-align: center;
+	animation: flash 5s infinite;
+}
+h2 {
+	text-align: center;
+	text-decoration: underline;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+label {
+	font-size: larger;
+}
+
+body {
+	background: linear-gradient(yellow, hotpink);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+button {
+	margin-top: 3px;
+	margin-bottom: 6px;
+	background-color: orange;
+}
+input {
+	margin-bottom: 2px;
+}
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container form {
+	margin: 10px;
+	width: 33%;
+	background-color: rgba(0, 0, 0, 0.2);
+	margin-bottom: auto;
+	border: 2px ridge black;
+	border-radius: 9px;
+}
+.container .left-display,
+.right-display {
+	margin: 10px;
+	width: 33%;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 3px;
+	border: 2px ridge black;
+}
+.img-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	font-family: Impact;
+	color: white;
+	font-family: impact;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+		-2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.img-container .top {
+	position: absolute;
+	top: 10px;
+	left: 25%;
+	right: 25%;
 	text-align: center;
 }
+.img-container .bottom {
+	position: absolute;
+	bottom: 10px;
+	left: 25%;
+	right: 25%;
+	text-align: center;
+}
+.meme-img {
+	border: 4px solid black;
+	width: 300px;
+	height: 300px;
+}
+.img-container.make-smaller > img {
+	width: 300px;
+	height: auto;
+	margin-top: 5px;
+}
 
-header {
-	display: flex;
+.hidden {
+	display: none;
+}
+
+.show {
 	justify-content: center;
+	bottom: 50%;
+	position: absolute;
+	border-radius: 20px;
+	transform: scale(0);
 }
-header div {
-	margin: 6px;
+.img-container:hover > button {
+	transform: scale(2);
+	transition: ease-in 0.5s;
 }
-
-#restart {
-  margin-left: 15px;
-}
-
-#game > div {
-	background-color: black;
-	transition: all 0.5s;
-	width: 25%;
-	flex-grow: 0;
-}
-#game {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+@keyframes flash {
+	0% {
+		color: salmon;
+	}
+	33% {
+		color: pink;
+	}
+	66% {
+		color: red;
+	}
+	100% {
+		color: salmon;
+	}
 }
